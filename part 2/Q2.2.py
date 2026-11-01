@@ -48,6 +48,18 @@ while True:
     elif state == State.MovingY2 and event == ("V", "0"):
         state = State.Parked
 
+    elif state == State.MovingX and event == ("H, +"):
+        state = State.MovingX
+
+    elif state == State.MovingX2 and event == ("H, +"):
+        state = State.MovingX2
+
+    elif state == State.MovingY and event == ("V, +"):
+        state = State.MovingY
+
+    elif state == State.MovingY2 and event == ("V, +"):
+        state = State.MovingY2
+
     else:
         print("Invalid event for the current state. Please try again.")
 
